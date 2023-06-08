@@ -25,7 +25,7 @@ class FullPageDialogOneButton extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(18, 0, 18, 0),
               child: Container(
-                color: BFColor.yellow,
+                color: BFColor.gold,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,

@@ -1,0 +1,19 @@
+<svg id="ico_download" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="그룹_3" data-name="그룹 3" transform="translate(3.52)">
+    <g id="그룹_2" data-name="그룹 2">
+      <path id="패스_17" data-name="패스 17" class="cls-1" d="M102.344,7.1H99.417V.586A.585.585,0,0,0,98.831,0H94.069a.585.585,0,0,0-.586.586V7.1H90.555a.586.586,0,0,0-.45.961l5.934,7.027a.586.586,0,0,0,.9,0l5.856-7.027A.586.586,0,0,0,102.344,7.1Z" transform="translate(-89.968)"/>
+    </g>
+  </g>
+  <g id="그룹_5" data-name="그룹 5" transform="translate(0 11.802)">
+    <g id="그룹_4" data-name="그룹 4">
+      <path id="패스_18" data-name="패스 18" class="cls-1" d="M19.414,302H17.07a.585.585,0,0,0-.586.586v4.1H3.516v-4.1A.585.585,0,0,0,2.93,302H.586a.585.585,0,0,0-.586.586v5.856A1.759,1.759,0,0,0,1.758,310.2H18.242A1.759,1.759,0,0,0,20,308.441v-5.856A.585.585,0,0,0,19.414,302Z" transform="translate(0 -302)"/>
+    </g>
+  </g>
+</svg>

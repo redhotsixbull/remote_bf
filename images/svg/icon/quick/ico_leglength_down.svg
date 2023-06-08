@@ -1,0 +1,23 @@
+<svg id="ico_leglength_down" xmlns="http://www.w3.org/2000/svg" width="50" height="34" viewBox="0 0 50 34">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="그룹_1135" data-name="그룹 1135" transform="translate(-330.789 -173.308)">
+        <g id="그룹_807" data-name="그룹 807" transform="translate(342.488 178.528)">
+            <path id="패스_269" data-name="패스 269" class="cls-2" d="M665.182 197.211a6.609 6.609 0 0 1-2.288.3h-8.129q-1.4 2.139-2.805 4.276a3.923 3.923 0 0 1-1.484 1.484 6.669 6.669 0 0 1-2.285.3h-3.052q2.943-4.491 5.892-8.985a3.929 3.929 0 0 1 1.483-1.484 6.7 6.7 0 0 1 2.288-.3h8.129l2.8-4.276a3.98 3.98 0 0 1 1.484-1.484 6.7 6.7 0 0 1 2.288-.3h3.052q-2.943 4.5-5.891 8.985a3.946 3.946 0 0 1-1.482 1.484z" transform="translate(-645.139 -179.7)"/>
+            <path id="패스_270" data-name="패스 270" class="cls-2" d="M665.086 187.565q-2.8 0-2.8-2.837v-.4a2.471 2.471 0 0 1 2.8-2.8h.4a2.47 2.47 0 0 1 2.794 2.8v.4q0 2.836-2.794 2.837z" transform="translate(-639.128 -181.528)"/>
+        </g>
+        <g id="그룹_970" data-name="그룹 970" transform="translate(337.289 191.602)">
+            <g id="그룹_967" data-name="그룹 967" transform="translate(.685)">
+                <path id="패스_469" data-name="패스 469" class="cls-2" d="m647.765 191.209 1.832.021-6.507 9.881-1.293-.85z" transform="translate(-641.797 -191.209)"/>
+            </g>
+            <g id="그룹_969" data-name="그룹 969" transform="translate(0 7.613)">
+                <g id="그룹_968" data-name="그룹 968">
+                    <path id="패스_470" data-name="패스 470" class="cls-2" d="m644.85 199.186-3.379 1.262-.182-3.6z" transform="translate(-641.289 -196.846)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

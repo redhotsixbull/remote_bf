@@ -11,6 +11,8 @@ dependencies:
   cached_network_image: 3.2.3
   fluttertoast: 8.2.2
   flutter_svg: 2.0.6
+  smooth_page_indicator: 1.1.0
+  flutter_screenutil: 5.8.4
   flutter: 
     sdk: flutter
 
@@ -24,6 +26,32 @@ flutter:
     - assets/
     - assets/logo/
     - assets/icon/
-
+    - images/
+    - images/jpg/
+    - images/png/
+    - images/svg/
+    - images/svg/control/
+    - images/svg/icon/
+    - images/svg/symbol/
+    - images/svg/symbol/auto/
+    - images/svg/symbol/brain/
+    - images/svg/symbol/healthcare/
+    - images/svg/symbol/manual/
+    - images/svg/symbol/meditation/
+    - images/svg/symbol/mental/
+    - images/png/chair/
+    - images/svg/icon/main/
+    - images/svg/icon/quick/
+    - images/svg/icon/auto/
+    - images/png/icon/
+    - images/png/img/
+    - images/svg/icon/view/
+    - images/png/icon/ico-air-on@2x.png
+    - images/png/icon/ico-air-off@2x.png
+    - images/png/button/
+    - images/png/guide/
+    - assets/
+    - assets/logo/
+    - assets/icon/
   uses-material-design: true
 

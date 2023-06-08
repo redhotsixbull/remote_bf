@@ -15,6 +15,8 @@ class BFBottomNavigation extends StatefulWidget {
 }
 
 class _BFBottomNavigationState extends State<BFBottomNavigation> {
+  int currentIndex = 0;
+
   _naviItem() {
     var itemList = [
       BottomNavigationBarItem(
@@ -67,12 +69,17 @@ class _BFBottomNavigationState extends State<BFBottomNavigation> {
             type: BottomNavigationBarType.fixed,
             unselectedItemColor: BFColor.white.withOpacity(0.5),
             selectedItemColor: BFColor.white,
-            backgroundColor: BFColor.primaryColor,
+            backgroundColor: BFColor.gray200,
             selectedFontSize: 12,
             unselectedFontSize: 12,
-            currentIndex: 2,
+            currentIndex: currentIndex,
             showUnselectedLabels: true,
-            onTap: (index) {},
+            onTap: (index) {
+              setState(() {
+                currentIndex = index;
+              });
+              widget.callBack(index);
+            },
             items: _naviItem(),
           ),
         ),

@@ -1,0 +1,13 @@
+<svg id="ico_bt_off" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+<!--    <defs>-->
+<!--        <style>-->
+<!--            .cls-3{fill:#fff}-->
+<!--        </style>-->
+<!--    </defs>-->
+    <circle id="bg" cx="24" cy="24" r="24" style="fill:#8e8e8e"/>
+    <path id="bg-2" data-name="bg" transform="translate(6 7)" style="fill:none" d="M0 0h36v36H0z"/>
+    <g id="_8674246_ic_fluent_bluetooth_disabled_regular_icon" data-name="8674246_ic_fluent_bluetooth_disabled_regular_icon" transform="translate(9.5 9.5)">
+        <path id="패스_899" data-name="패스 899" class="cls-3" d="M3.863 2.32A1.091 1.091 0 0 0 2.32 3.863l11.32 11.32v.723l.006.005v1.267L10.618 19.7a1.091 1.091 0 1 0 1.4 1.677l1.63-1.358v8.529a1.091 1.091 0 0 0 1.893.74l5.859-6.349 7.839 7.839a1.091 1.091 0 0 0 1.543-1.543zm11.962 15.048 4.027 4.026-4.023 4.36V18.2z" transform="translate(-2 -2)"/>
+        <path id="패스_900" data-name="패스 900" class="cls-3" d="m18.649 12.36-2.643 2.2-1.55-1.55 1.914-1.594-4.183-4.53v3.857L10 8.56V4.1a1.091 1.091 0 0 1 1.893-.74l6.855 7.426a1.091 1.091 0 0 1-.099 1.574z" transform="translate(1.641 -1.544)"/>
+    </g>
+</svg>

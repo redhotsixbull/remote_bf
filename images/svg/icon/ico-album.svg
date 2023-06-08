@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_album" width="45" height="45" viewBox="0 0 45 45">
+    <defs>
+        <style>
+            .cls-2{fill:#fff;stroke:#10355a;stroke-width:.5px}
+        </style>
+    </defs>
+    <path id="bg" fill="#5b8de8" d="M5 0h35a5 5 0 0 1 5 5v35a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z" opacity="0.3"/>
+    <g id="그룹_1214" transform="translate(-71.604 -71.604)">
+        <rect id="사각형_438" width="8" height="3" class="cls-2" rx="1" transform="translate(90.104 102.604)"/>
+        <rect id="사각형_439" width="8" height="3" class="cls-2" rx="1" transform="translate(90.104 97.604)"/>
+        <rect id="사각형_440" width="8" height="3" class="cls-2" rx="1" transform="translate(90.104 92.604)"/>
+        <rect id="사각형_441" width="8" height="3" class="cls-2" rx="1" transform="translate(90.104 87.604)"/>
+        <rect id="사각형_442" width="8" height="3" class="cls-2" rx="1" transform="translate(90.104 82.604)"/>
+        <rect id="사각형_444" width="8" height="3" class="cls-2" rx="1" transform="translate(100.104 102.604)"/>
+        <rect id="사각형_445" width="8" height="3" class="cls-2" rx="1" transform="translate(100.104 97.604)"/>
+        <rect id="사각형_446" width="8" height="3" class="cls-2" rx="1" transform="translate(100.104 92.604)"/>
+        <rect id="사각형_447" width="8" height="3" class="cls-2" rx="1" transform="translate(100.104 87.604)"/>
+        <rect id="사각형_448" width="8" height="3" class="cls-2" rx="1" transform="translate(80.104 102.604)"/>
+        <rect id="사각형_449" width="8" height="3" class="cls-2" rx="1" transform="translate(80.104 97.604)"/>
+    </g>
+</svg>

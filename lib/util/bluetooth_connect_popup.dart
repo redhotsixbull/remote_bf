@@ -153,7 +153,7 @@ class _BlueToothConnectPopupState extends State<BlueToothConnectPopup> {
                                 child: Text(
                               "재탐색",
                               style: BFGraphy.bfText2023.body2
-                                  .copyWith(color: BFColor.yellow),
+                                  .copyWith(color: BFColor.gold),
                             )),
                           ),
                         )),
@@ -188,8 +188,8 @@ class _BlueToothConnectPopupState extends State<BlueToothConnectPopup> {
             isConnect
                 ? Text(
                     "연결됨",
-                    style: BFGraphy.bfText2023.body2
-                        .copyWith(color: BFColor.yellow),
+                    style:
+                        BFGraphy.bfText2023.body2.copyWith(color: BFColor.gold),
                   )
                 : Container(),
           ],

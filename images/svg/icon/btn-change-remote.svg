@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="btn_change_remote" width="60" height="60" viewBox="0 0 60 60">
+    <defs>
+        <style>
+            .cls-3{fill:#ffffff;opacity:.7}
+        </style>
+    </defs>
+    <circle id="타원_41" cx="30" cy="30" r="30" fill="#ffffff" opacity="0.11"/>
+    <g id="사각형_517" fill="none" stroke="#ffffff" transform="translate(16 11)">
+        <rect width="28" height="38" stroke="none" rx="5"/>
+        <rect width="27" height="37" x=".5" y=".5" rx="4.5"/>
+    </g>
+    <circle id="타원_54" cx="2" cy="2" r="2" class="cls-3" transform="translate(23 20)"/>
+    <circle id="타원_56" cx="2" cy="2" r="2" class="cls-3" transform="translate(23 28)"/>
+    <circle id="타원_58" cx="2" cy="2" r="2" class="cls-3" transform="translate(23 36)"/>
+    <circle id="타원_55" cx="2" cy="2" r="2" class="cls-3" transform="translate(33 20)"/>
+    <circle id="타원_57" cx="2" cy="2" r="2" class="cls-3" transform="translate(33 28)"/>
+    <circle id="타원_59" cx="2" cy="2" r="2" class="cls-3" transform="translate(33 36)"/>
+</svg>

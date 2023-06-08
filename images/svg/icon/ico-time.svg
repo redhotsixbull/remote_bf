@@ -1,0 +1,19 @@
+<svg id="ico_time" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <style>
+            .cls-2{fill:#fff}
+        </style>
+    </defs>
+    <g id="clock" transform="translate(2 2)">
+        <g id="그룹_1144" data-name="그룹 1144">
+            <g id="그룹_1143" data-name="그룹 1143">
+                <path id="패스_578" data-name="패스 578" class="cls-2" d="M8.145 0A8.145 8.145 0 1 1 0 8.145 8.145 8.145 0 0 1 8.145 0zm0 15.126a6.981 6.981 0 1 0-6.981-6.981 6.981 6.981 0 0 0 6.981 6.981z"/>
+            </g>
+        </g>
+        <g id="그룹_1146" data-name="그룹 1146" transform="translate(7.564 2.908)">
+            <g id="그룹_1145" data-name="그룹 1145">
+                <path id="패스_579" data-name="패스 579" class="cls-2" d="M85.915 85.333a.582.582 0 0 1 .582.582v4.072h4.072a.582.582 0 1 1 0 1.163h-4.654a.582.582 0 0 1-.582-.582v-4.653a.582.582 0 0 1 .582-.582z" transform="translate(-85.333 -85.333)"/>
+            </g>
+        </g>
+    </g>
+</svg>

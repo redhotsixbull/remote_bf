@@ -1,0 +1,1691 @@
+//TODO 명령어 찾기
+
+int k = 3;
+int H10_KEY_NONE = 0x0000; //데이터받기
+int H10_KEY_POWER_OFF = 0x0007;
+int H10_KEY_POWER_ON = 0x0001;
+int H10_KEY_PAUSE = 0x0005;
+int H10_KEY_CONTINUE = 0x0006;
+
+int H10_KEY_EMERGENCY_STOP = 0x000F;
+
+int H10_KEY_ALL_VERSION = 0x0010;
+
+int H10_KEY_HW_TEST = 0x0011;
+
+int H10_KEY_ENTER_BOOT = 0x00FD;
+
+int H10_KEY_REFRESH = 0x00FE;
+
+int H10_KEY_ENG_START = 0x0110; // 엔지니어 모드 진입
+int H10_KEY_ENG = 0x0105; // 엔지니어 모드 진입
+int H10_KEY_SOUND = 0x1017;
+
+//선호모드(0-8)실행 커맨드
+int H10_KEY_FAVORITE_1 = 0x10E0; //선호모드 1
+
+int H10_KEY_FAVORITE_2 = 0x10E1; //선호모드 2
+
+int H10_KEY_FAVORITE_3 = 0x10E2; //선호모드 3
+
+int H10_KEY_FAVORITE_4 = 0x10E3;  //선호모드 4
+
+int H10_KEY_FAVORITE_5 = 0x10E4;//선호모드 5
+
+int H10_KEY_FAVORITE_6 = 0x10E5;//선호모드 6
+
+int H10_KEY_FAVORITE_7 = 0x10E6;//선호모드 7
+
+int H10_KEY_FAVORITE_8 = 0x10E7;//선호모드 8
+
+int H10_KEY_DEVICE_INFO = 0x5006;
+
+int H10_KEY_MAINBOARD_INFO = 0x0102;
+
+int H10_KEY_CHAIR_AUTO_0 = 0x1001;
+
+int H10_KEY_CHAIR_AUTO_1 = 0x1002;
+
+int H10_KEY_CHAIR_AUTO_2 = 0x1003;
+
+int H10_KEY_CHAIR_AUTO_3 = 0x1004;
+
+int H10_KEY_CHAIR_AUTO_4 = 0x1005;
+
+int H10_KEY_CHAIR_AUTO_5 = 0x1006;
+
+int H10_KEY_CHAIR_AUTO_6 = 0x1007;
+
+int H10_KEY_CHAIR_AUTO_7 = 0x1008;
+
+int H10_KEY_CHAIR_AUTO_8 = 0x1009;
+
+int H10_KEY_CHAIR_AUTO_9 = 0x100A;
+
+int H10_KEY_CHAIR_AUTO_10 = 0x100B;
+
+int H10_KEY_CHAIR_AUTO_11 = 0x100C;
+
+int H10_KEY_CHAIR_AUTO_12 = 0x100D;
+
+int H10_KEY_CHAIR_AUTO_13 = 0x100E;
+
+int H10_KEY_CHAIR_AUTO_14 = 0x100F;
+
+int H10_KEY_AUTO_YOGA_CHAIR = 0x1010;
+
+int H10_KEY_AUTO_WAKEUP = 0x1011;
+
+int H10_KEY_AUTO_RELAXATION = 0x1012;
+
+int H10_KEY_AUTO_YOGA_GENTLE = 0x1011;
+
+int H10_KEY_AUTO_YOGA_POWER = 0x1012;
+
+int H10_KEY_AUTO_CEO_CONFORT = 0x1013;
+
+int H10_KEY_AUTO_QUEEN_SPECIAL = 0x1014;
+
+int H10_KEY_AUTO_SENIOR_PRIORITY = 0x1015;
+
+int H10_KEY_AUTO_UPPER = 0x1016;
+
+int H10_KEY_AUTO_SPINE_CARE = 0x1017;
+
+int H10_KEY_AUTO_LOWER = 0x1018;
+
+int H10_KEY_AUTO_MORNING_ZAP = 0x1019;
+
+int H10_KEY_AUTO_REFRESHING_NAP = 0x101A;
+
+int H10_KEY_AUTO_SWEET_DREAMS = 0x101B;
+
+int H10_KEY_AUTO_DEMO1 = 0x101C;
+
+int H10_KEY_AUTO_DEMO2 = 0x101D;
+
+int H10_KEY_AUTO_GEMINI = 0x101E;
+
+int H10_KEY_AUTO_DRACO = 0x101F;
+
+int H10_KEY_AUTO_ANDROMEDA = 0x1020;
+
+int H10_KEY_AUTO_GALAXY_FANTASY = 0x1021;
+
+int H10_KEY_AUTO_SUN_GLORY = 0x1022;
+
+int H10_KEY_AUTO_MOON_LIGHT = 0x1023;
+
+int H10_KEY_AUTO_CUSTOM_1 = 0x10F0;
+
+int H10_KEY_AUTO_CUSTOM_2 = 0x10F1;
+
+int H10_KEY_AUTO_CUSTOM_3 = 0x10F2;
+
+int H10_KEY_AUTO_CUSTOM_4 = 0x10F3;
+
+int H10_KEY_AUTO_CUSTOM_5 = 0x10F4;
+
+int H10_KEY_AUTO_CUSTOM_6 = 0x10F5;
+
+int H10_KEY_AUTO_CUSTOM_DEBUG = 0x10FD;
+
+int H10_KEY_AUTO_AIR_FULL = 0x1910;
+
+int H10_KEY_PROG_AUTO_0 = 0x1080; //GLED
+
+int H10_KEY_PROG_AUTO_1 = 0x1081; //부기완화
+
+int H10_KEY_PROG_AUTO_2 = 0x1082; //숙취
+
+int H10_KEY_PROG_AUTO_3 = 0x1083; //후두하근 이완
+
+int H10_KEY_PROG_AUTO_4 = 0x1084; //편안한 장
+
+int H10_KEY_PROG_AUTO_5 = 0x1085; //퀸즈
+
+int H10_KEY_PROG_AUTO_6 = 0x1086; //회음부 마사지
+
+int H10_KEY_PROG_AUTO_7 = 0x1087; //번아웃 신드롬
+
+int H10_KEY_PROG_AUTO_8 = 0x1088; //심상
+
+int H10_KEY_PROG_AUTO_9 = 0x1089; // 집중력
+
+int H10_KEY_PROG_AUTO_10 = 0x108A; //웰빙
+
+int H10_KEY_PROG_AUTO_11 = 0x108B; //이완 훈련
+
+int H10_KEY_PROG_AUTO_12 = 0x108C; //호흡 이완
+int H10_KEY_PROG_AUTO_13 = 0x108D; //굿모닝
+
+int H10_KEY_PROG_AUTO_14 = 0x108E; //굿나잇
+
+int H10_KEY_PROG_AUTO_15 = 0x108F; //목 어깨
+int H10_KEY_PROG_AUTO_16 = 0x1090; //등 척추
+int H10_KEY_PROG_AUTO_17 = 0x1091; //허리 엉덩이
+int H10_KEY_PROG_AUTO_18 = 0x1092; //하체
+int H10_KEY_PROG_AUTO_19 = 0x1093; //하체 스트레칭
+int H10_KEY_PROG_AUTO_20 = 0x1094; //척추 스트레칭
+int H10_KEY_PROG_AUTO_21 = 0x1095; //슬로우 스트레칭
+int H10_KEY_PROG_AUTO_22 = 0x1096; //에어 스트레칭
+int H10_KEY_PROG_AUTO_23 = 0x1097; //자연수면
+int H10_KEY_PROG_AUTO_24 = 0x1098; //미니 낮잠
+int H10_KEY_PROG_AUTO_25 = 0x1099; //해먹 수면
+int H10_KEY_PROG_AUTO_26 = 0x109A; //야간 저소음
+int H10_KEY_PROG_AUTO_27 = 0x109B; //ceo
+int H10_KEY_PROG_AUTO_28 = 0x109C; //시니어
+int H10_KEY_PROG_AUTO_29 = 0x109D; //육아맘
+int H10_KEY_PROG_AUTO_30 = 0x109E; //수험생
+int H10_KEY_PROG_AUTO_31 = 0x109F; //골프
+int H10_KEY_PROG_AUTO_32 = 0x10A0; //필라테스
+int H10_KEY_PROG_AUTO_33 = 0x10A1; //요가
+int H10_KEY_PROG_AUTO_34 = 0x10A2; //드라이빙
+int H10_KEY_PROG_AUTO_35 = 0x10A3; // 마음위로
+int H10_KEY_PROG_AUTO_36 = 0x10A4; //마음 희망
+int H10_KEY_PROG_AUTO_37 = 0x10A5; //자존감
+int H10_KEY_PROG_AUTO_38 = 0x10A6; //감사
+int H10_KEY_PROG_AUTO_39 = 0x10A7; //용서
+int H10_KEY_PROG_AUTO_40 = 0x10A8; //트라우마
+int H10_KEY_PROG_AUTO_41 = 0x10A9; //사랑
+int H10_KEY_PROG_AUTO_42 = 0x10AA; //열정
+int H10_KEY_PROG_AUTO_43 = 0x10AB; //1단계
+int H10_KEY_PROG_AUTO_44 = 0x10AC; //2단계
+int H10_KEY_PROG_AUTO_45 = 0x10AD; //3단계
+int H10_KEY_PROG_AUTO_46 = 0x10AE; //4단계
+int H10_KEY_PROG_AUTO_47 = 0x10AF; //전체/주무름
+int H10_KEY_AUTO_MOSI_AM = 0x10B0;
+
+int H10_KEY_AUTO_MOSI_PM = 0x10B1;
+
+int H10_KEY_AUTO_MOSI_NIGHT = 0x10B2;
+
+int H10_KEY_AUTO_SMOOTH_MERID = 0x10B3;
+
+int H10_KEY_AUTO_ROW_POI = 0x10B4;
+
+int H10_KEY_AUTO_NURSE_BEL = 0x10B5;
+
+int H10_KEY_AUTO_BENEFIT_QI = 0x10B6;
+
+int H10_KEY_AUTO_KEEP_VIG = 0x10B7;
+
+int H10_KEY_KNEAD = 0x2010;
+
+int H10_KEY_CKNEAD = 0x2011; //전체주무름
+
+int H10_KEY_PRESS = 0x2012; //전체 지압
+
+int H10_KEY_KNOCK = 0x2013; //전체 두두림
+
+int H10_KEY_SKNOCK = 0x2014; //전체 손날 두드림
+
+int H10_KEY_WAVELET = 0x2015; //전체 복합안마
+
+int H10_KEY_RB = 0x2016; //전체 스윙
+
+int H10_KEY_MUSIC = 0x2017;
+
+int H10_KEY_3D_PRESS = 0x2018;
+
+int H10_KEY_RB_KNC = 0x2019; //전체 스윙두드림
+
+/*1. 에어 전체강도 변경시 H10_KEY_AIRBAG_FULL 커맨드 전송 후 H10_KEY_AIRBAG_STRENGTH_OFF~5 커맨드 전송(200ms 간격으로 전송)
+2. 부위별 강도 변경시 H10_KEY_AIRBAG_FULL 커맨드 전송 후 부위별 9군데 강도 전송(200ms 간격으로 전송)*/
+
+int H10_KEY_AIRBAG_FULL = 0x3010; //에어 부위 선택 커맨
+
+int H10_KEY_AIRBAG_ARM = 0x3011;
+
+int H10_KEY_AIRBAG_WAIST = 0x3012;
+
+int H10_KEY_AIRBAG_HIP = 0x3013;
+
+int H10_KEY_AIRBAG_LEG = 0x3014;
+
+int H10_KEY_AIRBAG_CLOSE = 0x3015;
+
+int H10_KEY_AIRBAG_STRENGTH_OFF = 0x3020; //에어백 전체 0
+
+int H10_KEY_AIRBAG_STRENGTH_1 = 0x3021; //에어백전체 1
+
+int H10_KEY_AIRBAG_STRENGTH_2 = 0x3022; //에어백 전체 2
+
+int H10_KEY_AIRBAG_STRENGTH_3 = 0x3023; //에어백 전체 3
+
+int H10_KEY_AIRBAG_STRENGTH_4 = 0x3024; //에어백 전체4
+
+int H10_KEY_AIRBAG_STRENGTH_5 = 0x3025; //에어백 전체 5
+
+int H10_KEY_AIRBAG_STRENGTH_ADD = 0x302D; //에어백 전체 +1
+
+int H10_KEY_AIRBAG_STRENGTH_DEC = 0x302E; //에어백 전체 -1
+
+int H10_KEY_AIRBAG_STRENGTH_TG = 0x302F;
+
+int H10_KEY_AIRBAG_SHOULDER_OFF = 0x3030; //어깨 에어 0드
+
+int H10_KEY_AIRBAG_SHOULDER_1 = 0x3031; //어깨 에어 1
+
+int H10_KEY_AIRBAG_SHOULDER_2 = 0x3032; //어깨 2
+
+int H10_KEY_AIRBAG_SHOULDER_3 = 0x3033; //어깨 3
+
+int H10_KEY_AIRBAG_SHOULDER_4 = 0x3034; //어깨 4
+
+int H10_KEY_AIRBAG_SHOULDER_5 = 0x3035; //어깨 5
+
+int H10_KEY_AIRBAG_SHOULDER_ADD = 0x303D; //+1
+
+int H10_KEY_AIRBAG_SHOULDER_DEC = 0x303E; //-1
+
+int H10_KEY_AIRBAG_SHOULDER_TG = 0x303F;
+
+int H10_KEY_AIRBAG_ARM_OFF = 0x3040;  //에어 팔
+
+int H10_KEY_AIRBAG_ARM_1 = 0x3041;  //에어
+
+int H10_KEY_AIRBAG_ARM_2 = 0x3042;
+
+int H10_KEY_AIRBAG_ARM_3 = 0x3043;
+
+int H10_KEY_AIRBAG_ARM_4 = 0x3044;
+
+int H10_KEY_AIRBAG_ARM_5 = 0x3045;
+
+int H10_KEY_AIRBAG_ARM_ADD = 0x304D;
+
+int H10_KEY_AIRBAG_ARM_DEC = 0x304E;
+
+int H10_KEY_AIRBAG_ARM_TG = 0x304F;
+
+int H10_KEY_AIRBAG_BACK_OFF = 0x3090; //에어 등
+
+int H10_KEY_AIRBAG_BACK_1 = 0x3091;
+
+int H10_KEY_AIRBAG_BACK_2 = 0x3092;
+
+int H10_KEY_AIRBAG_BACK_3 = 0x3093;
+
+int H10_KEY_AIRBAG_BACK_4 = 0x3094;
+
+int H10_KEY_AIRBAG_BACK_5 = 0x3095;
+
+int H10_KEY_AIRBAG_WAIST_OFF = 0x3050; //??
+
+int H10_KEY_AIRBAG_WAIST_1 = 0x3051; //??
+
+int H10_KEY_AIRBAG_WAIST_2 = 0x3052; //2
+
+int H10_KEY_AIRBAG_WAIST_3 = 0x3053; //3
+
+int H10_KEY_AIRBAG_WAIST_4 = 0x3054; //4
+
+int H10_KEY_AIRBAG_WAIST_5 = 0x3055; //5
+
+int H10_KEY_AIRBAG_WAIST_ADD = 0x305D; //+1
+
+int H10_KEY_AIRBAG_WAIST_DEC = 0x305E; //-1
+
+int H10_KEY_AIRBAG_WAIST_TG = 0x305F;
+
+int H10_KEY_AIRBAG_HIP_OFF = 0x3060; //에어 골반
+
+int H10_KEY_AIRBAG_HIP_1 = 0x3061;  //에어 골반
+
+int H10_KEY_AIRBAG_HIP_2 = 0x3062;
+
+int H10_KEY_AIRBAG_HIP_3 = 0x3063;
+
+int H10_KEY_AIRBAG_HIP_4 = 0x3064;
+
+int H10_KEY_AIRBAG_HIP_5 = 0x3065;
+
+int H10_KEY_AIRBAG_HIP_ADD = 0x306D;
+
+int H10_KEY_AIRBAG_HIP_DEC = 0x306E;
+
+int H10_KEY_AIRBAG_HIP_TG = 0x306F;
+
+int H10_KEY_AIRBAG_LEG_OFF = 0x3070; //에어 종아리
+
+int H10_KEY_AIRBAG_LEG_1 = 0x3071;  //에어 종아리
+
+int H10_KEY_AIRBAG_LEG_2 = 0x3072;
+
+int H10_KEY_AIRBAG_LEG_3 = 0x3073;
+
+int H10_KEY_AIRBAG_LEG_4 = 0x3074;
+
+int H10_KEY_AIRBAG_LEG_5 = 0x3075;
+
+int H10_KEY_AIRBAG_LEG_ADD = 0x307D;
+
+int H10_KEY_AIRBAG_LEG_DEC = 0x307E;
+
+int H10_KEY_AIRBAG_LEG_TG = 0x307F;
+
+int H10_KEY_AIRBAG_FOOT_OFF = 0x3080; //에어 발등(발)
+
+int H10_KEY_AIRBAG_FOOT_1 = 0x3081; //에어 발등
+
+int H10_KEY_AIRBAG_FOOT_2 = 0x3082;
+
+int H10_KEY_AIRBAG_FOOT_3 = 0x3083;
+
+int H10_KEY_AIRBAG_FOOT_4 = 0x3084;
+
+int H10_KEY_AIRBAG_FOOT_5 = 0x3085;
+
+int H10_KEY_AIRBAG_FOOT_ADD = 0x308D;
+
+int H10_KEY_AIRBAG_FOOT_DEC = 0x308E;
+
+int H10_KEY_AIRBAG_FOOT_TG = 0x308F;
+
+int H10_KEY_AIRBAG_PERI_OFF = 0x30A0; //에어 회음부
+
+int H10_KEY_AIRBAG_PERI_1 = 0x30A1;
+
+int H10_KEY_AIRBAG_PERI_2 = 0x30A2;
+
+int H10_KEY_AIRBAG_PERI_3 = 0x30A3;
+
+int H10_KEY_AIRBAG_PERI_4 = 0x30A4;
+
+int H10_KEY_AIRBAG_PERI_5 = 0x30A5;
+
+int H10_KEY_ARIBAG_HEEL_OFF = 0x30C0; //에어 발등(뒤꿈치)
+
+int H10_KEY_ARIBAG_HEEL_1 = 0x30C1;
+
+int H10_KEY_ARIBAG_HEEL_2 = 0x30C2;
+
+int H10_KEY_ARIBAG_HEEL_3 = 0x30C3;
+
+int H10_KEY_ARIBAG_HEEL_4 = 0x30C4;
+
+int H10_KEY_ARIBAG_HEEL_5 = 0x30C5;
+
+int H10_KEY_ARIBAG_THIGH_OFF = 0x30B0;  //허벅지 에어 강도
+
+int H10_KEY_ARIBAG_THIGH_1 = 0x30B1;
+
+int H10_KEY_ARIBAG_THIGH_2 = 0x30B2;
+
+int H10_KEY_ARIBAG_THIGH_3 = 0x30B3;
+
+int H10_KEY_ARIBAG_THIGH_4 = 0x30B4;
+
+int H10_KEY_ARIBAG_THIGH_5 = 0x30B5;
+
+int H10_KEY_LEG_ALL_SPEED_OFF       = 0x3910; //종아리/발바닥 단계별(off, 1-5)
+
+// int H10_KEY_LEG_ALL_SPEED_ON        = 0x3901;
+
+int H10_KEY_LEG_ALL_SPEED1          = 0x3911;
+
+int H10_KEY_LEG_ALL_SPEED2          = 0x3912;
+
+int H10_KEY_LEG_ALL_SPEED3          = 0x3913;
+
+int H10_KEY_LEG_ALL_SPEED4          = 0x3914;
+
+int H10_KEY_LEG_ALL_SPEED5          = 0x3915;
+
+int H10_KEY_LEG_ALL_ADD             = 0x390A;
+
+int H10_KEY_LEG_ALL_DEC             = 0x390B;
+
+int H10_KEY_LEG_ALL_TG              = 0x390F;
+
+
+
+
+//온열은 전체 변경시 전체 커맨드 전송이구요.
+//부위별 변경시 해당 부위별 3군데를 200ms 간격으로 보내주시면 되요
+
+int H10_KEY_ALL_HEAT_SWITCH = 0x4010; //전체 온열 현재 사용x
+
+int H10_KEY_ALL_HEAT_0 = 0x401F; //전체 온열 0
+
+int H10_KEY_ALL_HEAT_1 = 0x4011;
+
+int H10_KEY_ALL_HEAT_2 = 0x4012;
+
+int H10_KEY_ALL_HEAT_3 = 0x4013; //전체 3
+
+int H10_KEY_BACK_HEAT_0 = 0x4018; //온열등
+
+int H10_KEY_BACK_HEAT_1 = 0x4019;
+
+int H10_KEY_BACK_HEAT_2 = 0x401A;
+
+int H10_KEY_BACK_HEAT_3 = 0x401B;
+
+int H10_KEY_LEG_HEAT_0 = 0x4014; //none
+
+int H10_KEY_LEG_HEAT_1 = 0x4015;
+
+int H10_KEY_LEG_HEAT_2 = 0x4016;
+
+int H10_KEY_LEG_HEAT_3 = 0x4017;
+
+int H10_KEY_FOOT_HEAT_0 = 0x4030; //온열 발바닥 off
+
+int H10_KEY_FOOT_HEAT_1 = 0x4031;
+
+int H10_KEY_FOOT_HEAT_2 = 0x4032;
+
+int H10_KEY_FOOT_HEAT_3 = 0x4033;
+
+int H10_KEY_CORE_HEAT_0 = 0x4034; //온열볼 off
+
+int H10_KEY_CORE_HEAT_1 = 0x4035;
+
+int H10_KEY_CORE_HEAT_2 = 0x4036;
+
+int H10_KEY_CORE_HEAT_3 = 0x4037;
+
+int H10_KEY_WHEEL_SPEED_OFF = 0x4020; //발바닥 롤링
+
+int H10_KEY_WHEEL_SPEED_ON = 0x4021;
+
+int H10_KEY_WHEEL_SPEED1 = 0x4022;    //마사지 속도
+
+int H10_KEY_WHEEL_SPEED2 = 0x4023;
+
+int H10_KEY_WHEEL_SPEED3 = 0x4024;
+
+int H10_KEY_WIND_HOT_0 = 0x4000;
+
+int H10_KEY_WIND_HOT_1 = 0x4001;
+
+int H10_KEY_WIND_HOT_2 = 0x4002;
+
+int H10_KEY_WIND_HOT_3 = 0x4003;
+
+int H10_KEY_WIND_HOT_4 = 0x4004;
+
+int H10_KEY_WIND_HOT_5 = 0x4005;
+
+int H10_KEY_WIND_COLD_0 = 0x4008;
+
+int H10_KEY_WIND_COLD_1 = 0x4009;
+
+int H10_KEY_WIND_COLD_2 = 0x400A;
+
+int H10_KEY_WIND_COLD_3 = 0x400B;
+
+int H10_KEY_WIND_COLD_4 = 0x400C;
+
+int H10_KEY_WIND_COLD_5 = 0x400D;
+
+int H10_KEY_LEGKND_SPEED_OFF = 0x4050;
+
+int H10_KEY_LEGKND_SPEED_ON = 0x4051;
+
+int H10_KEY_LEGKND_SPEED1 = 0x4052;
+
+int H10_KEY_LEGKND_SPEED2 = 0x4053;
+
+int H10_KEY_LEGKND_SPEED3 = 0x4054;
+
+int H10_KEY_ANION = 0x4066;
+
+int H10_KEY_WORK_TIME_10MIN = 0x4073; //안마의자 시간 10분
+
+int H10_KEY_WORK_TIME_20MIN = 0x4074;
+
+int H10_KEY_WORK_TIME_30MIN = 0x4075; //시간 30분
+
+int H10_KEY_WORK_TIME_05MIN = 0x4076;
+
+int H10_KEY_WORK_TIME_15MIN = 0x4077;
+
+int H10_KEY_WORK_TIME_25MIN = 0x4078;
+
+int H10_KEY_WORK_TIME_35MIN = 0x4079;
+
+int H10_KEY_WORK_TIME_40MIN = 0x407A;
+
+int H10_KEY_WORK_TIME_ADD_MIN = 0x407B;
+
+int H10_KEY_WORK_TIME_DEC_MIN = 0x407C;
+
+int H10_KEY_WORK_TIME_ADD_5MIN = 0x407D;
+
+int H10_KEY_WORK_TIME_DEC_5MIN = 0x407E;
+
+int H10_KEY_RUNOVER_NORESET = 0x4080;
+
+int H10_KEY_RUNOVER_RESET = 0x4081;
+
+int H10_KEY_HAND_BEEP_ON = 0x4082;
+
+int H10_KEY_HAND_BEEP_OFF = 0x4083;
+
+int H10_KEY_LED_RED = 0x4084;
+
+int H10_KEY_LED_ORANGE = 0x4085;
+
+int H10_KEY_LED_YELLOW = 0x4086;
+
+int H10_KEY_LED_GREEN = 0x4087;
+
+int H10_KEY_LED_CYAN = 0x4088;
+
+int H10_KEY_LED_BLUE = 0x4089;
+
+int H10_KEY_LED_PURPLE = 0x408A;
+
+int H10_KEY_LED_WHITE = 0x408B;
+
+int H10_KEY_RGB_HOLD = 0x408C;
+
+int H10_KEY_RGB_BREATH = 0x408D;
+
+int H10_KEY_RGB_MORE_SLOW = 0x408E;
+
+int H10_KEY_RGB_SINGLE_QUICK = 0x408F;
+
+int H10_KEY_RGB_SINGLE_STRONG = 0x4090;
+
+int H10_KEY_RGB_SINGLE_WEAK = 0x4091;
+
+int H10_KEY_RGB_LEVEL1 = 0x4092;
+
+int H10_KEY_RGB_LEVEL2 = 0x4093;
+
+int H10_KEY_RGB_LEVEL3 = 0x4094;
+
+int H10_KEY_RGB_LEVEL4 = 0x4095;
+
+int H10_KEY_RGB_LEVEL5 = 0x4096;
+
+int H10_KEY_HAND_BK_STRENGTH1 = 0x4097; //리모컨 화면밝기 조절
+
+int H10_KEY_HAND_BK_STRENGTH2 = 0x4098;
+
+int H10_KEY_HAND_BK_STRENGTH3 = 0x4099;
+
+int H10_KEY_HAND_LED_SW = 0x409A; //안마의자 사이드 led 제어
+
+int H10_KEY_DEMO_VOICE_SW = 0x409B;
+
+int H10_KEY_HAND_BK_STRENGTH4 = 0x409C;
+
+int H10_KEY_HAND_BK_STRENGTH5 = 0x409D; //리모컨 화면밝기
+
+int H10_KEY_JUMP_SHD_ADJ = 0x500D;     //어깨위치 취소
+
+int H10_KEY_EXIT_SHD_ADJ = 0x500E;     //어깨위치 확인
+
+int H10_KEY_ENTER_SHD_ADJ = 0x500F;     //어깨위치 조정 시
+
+int H10_KEY_WALK_UP_START = 0x5010; //안마 볼 위치 조정
+
+int H10_KEY_WALK_UP_STOP = 0x5011;
+
+int H10_KEY_WALK_DOWN_START = 0x5012;
+
+int H10_KEY_WALK_DOWN_STOP = 0x5013;
+
+int H10_KEY_BACKPAD_UP_START = 0x5014; //전신각도 업
+
+int H10_KEY_BACKPAD_DOWN_START = 0x5015; //전신각도 다운
+
+int H10_KEY_BACKPAD_STOP = 0x5016; //전신각도 스탑
+
+int H10_KEY_BACKPAD_UP_LITTLE = 0x5041; // 살짝조절
+
+int H10_KEY_BACKPAD_DOWN_LITTLE = 0x5042; //살짝 조조ㅓㄹ
+
+int H10_KEY_LEGPAD_UP_START = 0x5017; //다리각도 조절
+
+int H10_KEY_LEGPAD_DOWN_START = 0x5018;
+
+int H10_KEY_LEGPAD_STOP = 0x5019; //다리각도스탑
+
+int H10_KEY_LEGPAD_UP_LITTLE = 0x5043; //다리각도 살짝
+
+int H10_KEY_LEGPAD_DOWN_LITTLE = 0x5044;
+
+int H10_KEY_FLEX_EXTEND = 0x501A; //다리길이 조절 늘리기
+
+int H10_KEY_FLEX_CONTRACT = 0x501B; //다리길이 조 줄이기절
+
+int H10_KEY_FLEX_STOP = 0x501C; //다리길이 조절 스탑
+
+int H10_KEY_KNEE_UP_START = 0x5020;
+
+int H10_KEY_KNEE_DOWN_START = 0x5021;
+
+int H10_KEY_KNEE_STOP = 0x5022;
+
+int H10_KEY_KNEE_SHAKE_SWITCH = 0x4071;
+
+int H10_KEY_KNEE_MOVE_SWITCH = 0x4072;
+
+int H10_KEY_ZERO_OFF = 0x5032; //무중력 0
+
+int H10_KEY_ZERO_LEVEL1 = 0x5033;
+
+int H10_KEY_ZERO_LEVEL2 = 0x5034; //무중력 2
+
+int H10_KEY_ROLLER_STRENGTH_OFF = 0x5060; // 발바닥롤링
+
+int H10_KEY_ROLLER_STRENGTH_1 = 0x5061;
+
+int H10_KEY_ROLLER_STRENGTH_2 = 0x5062;
+
+int H10_KEY_ROLLER_STRENGTH_3 = 0x5063;
+
+int H10_KEY_ROLLER_STRENGTH_4 = 0x5064;
+
+int H10_KEY_ROLLER_STRENGTH_5 = 0x5065;
+
+int H10_KEY_ROLLER_STRENGTH_6 = 0x5066;
+
+int H10_KEY_ROLLER_STRENGTH_ADD = 0x506D;
+
+int H10_KEY_ROLLER_STRENGTH_DEC = 0x506E;
+
+int H10_KEY_ROLLER_STRENGTH_TG = 0x506F;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_OFF = 0x5070; //종아리 롤링
+
+int H10_KEY_LEG_ROLLER_STRENGTH_1 = 0x5071;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_2 = 0x5072;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_3 = 0x5073;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_4 = 0x5074;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_5 = 0x5075;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_6 = 0x5076;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_ADD = 0x507D;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_DEC = 0x507E;
+
+int H10_KEY_LEG_ROLLER_STRENGTH_TG = 0x507F;
+
+int H10_KEY_SPEED_1 = 0x5111;
+
+int H10_KEY_SPEED_2 = 0x5112;
+
+int H10_KEY_SPEED_3 = 0x5113;
+
+int H10_KEY_SPEED_4 = 0x5114;
+
+int H10_KEY_SPEED_5 = 0x5115;
+
+int H10_KEY_SPEED_6 = 0x5116;
+
+int H10_KEY_WALK_SPEED_1 = 0x5131;  //상하이동속도 1
+
+int H10_KEY_WALK_SPEED_2 = 0x5132;  //상하이동속도 2
+
+int H10_KEY_WALK_SPEED_3 = 0x5133;  //상하이동속도 3
+
+int H10_KEY_WALK_SPEED_4 = 0x5134;  //상하이동속도 4
+
+int H10_KEY_WALK_SPEED_5 = 0x5135;  //상하이동속도 5
+
+int H10_KEY_WALK_SPEED_6 = 0x5136;  ////상하이동속도 6
+
+int H10_KEY_WALK_SPEED_ADD = 0x513A;
+
+int H10_KEY_WALK_SPEED_DEC = 0x513B;
+
+int H10_KEY_WALK_SPEED_TG = 0x513F;
+
+int H10_KEY_WIDTH_MAX = 0x5141;  //마사지 간격 3
+
+int H10_KEY_WIDTH_MED = 0x5142;  //마사지 간격 2
+
+int H10_KEY_WIDTH_MIN = 0x5143;  //마사지 간격 1
+
+int H10_KEY_RB_MAX = 0x5144; // 문서에 없음
+int H10_KEY_RB_MED = 0x5145;
+
+int H10_KEY_RB_MIN = 0x5146;
+
+int H10_KEY_LOCATE_FULL = 0x5160; //부분안마? //마사지 범위 //수동 전체마사
+
+int H10_KEY_LOCATE_PART = 0x5161;
+
+int H10_KEY_LOCATE_POINT = 0x5162;//마사지 범위  //수동 고정
+
+int H10_KEY_LOCATE_SHD = 0x5163;//마사지 범위 //수동 목/어깨
+
+int H10_KEY_LOCATE_BACK = 0x5164;//마사지 범위 //수동 등/허리
+
+int H10_KEY_LOCATE_WST = 0x5165;//마사지 범위   //수동 허리/엉덩이
+
+int H10_KEY_LOCATE_LEG = 0x3903;//마사지 범위   //수동 종아리/발바닥
+
+int H10_KEY_LOCATE_HIP = 0x5166;
+
+//0x5141 - 5143 - 마사지 간격(1-3)
+// 5131 - 5135 - 상하이동속도 (1-5) 46 3
+// 5150 - 5155 - xd강도(0-5)
+
+int H10_KEY_3D_STRENGTH_0 = 0x5150; //XD강도 0
+
+int H10_KEY_3D_STRENGTH_1 = 0x5151;  //XD강도 1
+
+int H10_KEY_3D_STRENGTH_2 = 0x5152;  //XD강도 2
+
+int H10_KEY_3D_STRENGTH_3 = 0x5153;  //XD강도 3
+
+int H10_KEY_3D_STRENGTH_4 = 0x5154;  //XD강도 4
+
+int H10_KEY_3D_STRENGTH_5 = 0x5155; //XD강도 5
+
+int H10_KEY_3D_STRENGTH = 0x515A;
+
+int H10_KEY_3D_STRENGTH_ADD = 0x515B;
+
+int H10_KEY_3D_STRENGTH_DEC = 0x515C;
+
+int H10_KEY_3D_STRENGTH_STOP = 0x515D;
+
+int H10_KEY_3D_STRENGTH_TG2 = 0x515F;
+
+int H10_KEY_4D_STRENGTH_0 = 0x5180;
+
+int H10_KEY_4D_STRENGTH_1 = 0x5181;
+
+int H10_KEY_4D_STRENGTH_2 = 0x5182;
+
+int H10_KEY_4D_STRENGTH_3 = 0x5183;
+
+int H10_KEY_4D_STRENGTH_4 = 0x5184;
+
+int H10_KEY_4D_STRENGTH_5 = 0x5185;
+
+int H10_KEY_4D_STRENGTH = 0x518A;
+
+int H10_KEY_4D_STRENGTH_ADD = 0x518B;
+
+int H10_KEY_4D_STRENGTH_DEC = 0x518C;
+
+int H10_KEY_4D_STRENGTH_STOP = 0x518D;
+
+int H10_KEY_ALL_STRENGTH_1 = 0x51A1;
+
+int H10_KEY_ALL_STRENGTH_2 = 0x51A2;
+
+int H10_KEY_ALL_STRENGTH_3 = 0x51A3;
+
+int H10_KEY_ALL_STRENGTH_4 = 0x51A4;
+
+int H10_KEY_ALL_STRENGTH_5 = 0x51A5;
+
+int H10_KEY_ALL_STRENGTH_6 = 0x51A6;
+
+int H10_KEY_ALL_STRENGTH_ADD = 0x51AD;
+
+int H10_KEY_ALL_STRENGTH_DEC = 0x51AE;
+
+int H10_KEY_ALL_STRENGTH_TG = 0x51AF;
+
+int H10_KEY_SHD_STRENGTH_OFF = 0x51B0;  //목/어깨 단계별(0-5)
+
+int H10_KEY_SHD_STRENGTH_1 = 0x51B1;
+
+int H10_KEY_SHD_STRENGTH_2 = 0x51B2;
+
+int H10_KEY_SHD_STRENGTH_3 = 0x51B3;
+
+int H10_KEY_SHD_STRENGTH_4 = 0x51B4;
+
+int H10_KEY_SHD_STRENGTH_5 = 0x51B5;
+
+int H10_KEY_SHD_STRENGTH_6 = 0x51B6;
+
+int H10_KEY_SHD_STRENGTH_ADD = 0x51BD; //목 어깨속도 증가
+
+int H10_KEY_SHD_STRENGTH_DEC = 0x51BE;  //목 어깨속도 감소
+
+int H10_KEY_SHD_STRENGTH_TG = 0x51BF;
+
+int H10_KEY_BACK_STRENGTH_OFF = 0x51C0;   //등/허리 단계별(0-5)
+
+int H10_KEY_BACK_STRENGTH_1 = 0x51C1;
+
+int H10_KEY_BACK_STRENGTH_2 = 0x51C2;
+
+int H10_KEY_BACK_STRENGTH_3 = 0x51C3;
+
+int H10_KEY_BACK_STRENGTH_4 = 0x51C4;
+
+int H10_KEY_BACK_STRENGTH_5 = 0x51C5;
+
+int H10_KEY_BACK_STRENGTH_6 = 0x51C6;
+
+int H10_KEY_BACK_STRENGTH_ADD = 0x51CD; //등허리속도 증가
+
+int H10_KEY_BACK_STRENGTH_DEC = 0x51CE; //등허리속도 감소
+
+int H10_KEY_BACK_STRENGTH_TG = 0x51CF;
+
+int H10_KEY_WST_STRENGTH_OFF = 0x51D0;  //허리/엉덩이 단계별(0-5)
+
+int H10_KEY_WST_STRENGTH_1 = 0x51D1;
+
+int H10_KEY_WST_STRENGTH_2 = 0x51D2;
+
+int H10_KEY_WST_STRENGTH_3 = 0x51D3;
+
+int H10_KEY_WST_STRENGTH_4 = 0x51D4;
+
+int H10_KEY_WST_STRENGTH_5 = 0x51D5;
+
+int H10_KEY_WST_STRENGTH_6 = 0x51D6;
+
+int H10_KEY_WST_STRENGTH_ADD = 0x51DD;  //허리엉덩이속도 증가
+
+int H10_KEY_WST_STRENGTH_DEC = 0x51DE;  //허리 엉덩이속도 감소
+
+int H10_KEY_WST_STRENGTH_TG = 0x51DF;
+
+int H10_KEY_HIP_STRENGTH_1 = 0x51E1;
+
+int H10_KEY_HIP_STRENGTH_2 = 0x51E2;
+
+int H10_KEY_HIP_STRENGTH_3 = 0x51E3;
+
+int H10_KEY_HIP_STRENGTH_4 = 0x51E4;
+
+int H10_KEY_HIP_STRENGTH_5 = 0x51E5;
+
+int H10_KEY_HIP_STRENGTH_6 = 0x51E6;
+
+int H10_KEY_HIP_STRENGTH_ADD = 0x51ED;
+
+int H10_KEY_HIP_STRENGTH_DEC = 0x51EE;
+
+int H10_KEY_HIP_STRENGTH_TG = 0x51EF;
+
+// int H10_KEY_LEG_ALL_ADD = 0x390A;  //종아리/발바닥 속도 증가
+//
+// int H10_KEY_LEG_ALL_DEC = 0x390B; //종아리/발바닥 속도 감소
+
+int H10_KEY_WIFI_RESET = 0x5400;    //와이파이 on/off 설정
+
+int H10_KEY_WIFI_EXIT_CONFIG = 0x5401;
+
+int H10_KEY_BLUETOOTH = 0x4063;
+
+int H10_KEY_PAD_POWER_ON = 0x4064;
+
+int H10_KEY_PAD_POWER_OFF = 0x4065;
+
+int H10_KEY_VOICECTRL = 0x4060;
+
+int H10_KEY_LEDRGB = 0x4069;
+
+int H10_KEY_LANGUAGE_EN = 0x5330; //언어
+
+int H10_KEY_LANGUAGE_CH = 0x5331;
+
+int H10_KEY_LANGUAGE_GD = 0x5332;
+
+int H10_KEY_LANGUAGE_JP = 0x5336;
+
+int H10_KEY_LANGUAGE_KR = 0x5337;
+
+int H10_KEY_LANGUAGE_RU = 0x5338;
+
+int H10_KEY_SPEAK_SELF = 0x4100;
+
+int H10_KEY_VOICE_RANDOM = 0x410A;
+
+int H10_KEY_VOICE_ON = 0x410F;
+
+int H10_KEY_VOICE_OFF = 0x4110;
+
+int H10_KEY_SONG_1 = 0x4111;
+
+int H10_KEY_SONG_2 = 0x4112;
+
+int H10_KEY_SONG_3 = 0x4113;
+
+int H10_KEY_SONG_4 = 0x4114;
+
+int H10_KEY_SONG_5 = 0x4115;
+
+int H10_KEY_SONG_6 = 0x4116;
+
+int H10_KEY_SONG_7 = 0x4117;
+
+int H10_KEY_SONG_8 = 0x4118;
+
+int H10_KEY_SONG_9 = 0x4119;
+
+int H10_KEY_SONG_10 = 0x411A;
+
+int H10_KEY_SONG_11 = 0x4131;
+
+int H10_KEY_SONG_12 = 0x4132;
+
+int H10_KEY_SONG_13 = 0x4133;
+
+int H10_KEY_SONG_14 = 0x4134;
+
+int H10_KEY_SONG_15 = 0x4135;
+
+int H10_KEY_SONG_16 = 0x4136;
+
+int H10_KEY_SONG_17 = 0x4137;
+
+int H10_KEY_SONG_18 = 0x4138;
+
+int H10_KEY_SONG_19 = 0x4139;
+
+int H10_KEY_SONG_20 = 0x413A;
+
+int H10_KEY_VOICE_VOLUME_0 = 0x4120; //볼륨조절
+
+int H10_KEY_VOICE_VOLUME_1 = 0x4121;
+
+int H10_KEY_VOICE_VOLUME_2 = 0x4122;
+
+int H10_KEY_VOICE_VOLUME_3 = 0x4123;
+
+int H10_KEY_VOICE_VOLUME_4 = 0x4124;
+
+int H10_KEY_VOICE_VOLUME_5 = 0x4125;
+
+int H10_KEY_VOICE_VOLUME_6 = 0x4126;
+
+int H10_KEY_VOICE_VOLUME_7 = 0x4127;
+
+int H10_KEY_VOICE_VOLUME_8 = 0x4128;
+
+int H10_KEY_VOICE_VOLUME_9 = 0x4129;
+
+int H10_KEY_VOICE_VOLUME_10 = 0x412a;
+
+int H10_KEY_VOICE_VOLUME_11 = 0x412b;
+
+int H10_KEY_VOICE_VOLUME_12 = 0x412c;
+
+int H10_KEY_VOICE_VOLUME_13 = 0x412d;
+
+int H10_KEY_VOICE_VOLUME_14 = 0x412e;
+
+int H10_KEY_VOICE_VOLUME_15 = 0x412f;
+
+int H10_KEY_VOICE_VOLUME_ADD = 0x412E;
+
+int H10_KEY_VOICE_VOLUME_DEC = 0x412F;
+
+int QUICK_KEY_POWER_OFF = 0x4200;
+
+int QUICK_KEY_POWER_ON = 0x4201;
+
+int QUICK_KEY_AUTO_CHANGE = 0x4202;
+
+int QUICK_KEY_BACKPAD_UP_START = 0x4203;
+
+int QUICK_KEY_BACKPAD_DOWN_START = 0x4204;
+
+int QUICK_KEY_BACKPAD_STOP = 0x4205;
+
+int QUICK_KEY_TIME_CHANGE = 0x4206;
+
+int QUICK_KEY_PAUSE_RESTORE = 0x4207;
+
+int QUICK_KEY_HEAT_ON_OFF = 0x4208;
+
+int QUICK_KEY_AIRBAG_STRENGTH = 0x4209;
+
+int QUICK_KEY_ZERO = 0x420A;
+
+int QUICK_KEY_LEG_UP_START = 0x420B;
+
+int QUICK_KEY_LEG_UP_STOP = 0x420C;
+
+int QUICK_KEY_LEG_DOWN_START = 0x420D;
+
+int QUICK_KEY_LEG_DOWN_STOP = 0x420E;
+
+int QUICK_KEY_LEG_STRETCH_START = 0x420F;
+
+int QUICK_KEY_LEG_STRETCH_STOP = 0x4210;
+
+int QUICK_KEY_LEG_SHRINK_START = 0x4211;
+
+int QUICK_KEY_LEG_SHRINK_STOP = 0x4212;
+
+int QUICK_KEY_3D_STRENGTH_ADD = 0x4213;
+
+int QUICK_KEY_3D_STRENGTH_LESS = 0x4214;
+
+int QUICK_KEY_3D_STRENGTH_STOP = 0x4215;
+
+int QUICK_KEY_3D_STRENGTH_ADD_START = 0x4216;
+
+int QUICK_KEY_3D_STRENGTH_DEC_START = 0x4217;
+
+int QUICK_KEY_AIR_ADD = 0x4218;
+
+int QUICK_KEY_AIR_DEC = 0x4219;
+
+int QUICK_KEY_MANUAL_TOOGLE = 0x4220;
+
+int QUICK_KEY_DEMO1 = 0x4221;
+
+int QUICK_KEY_DEMO2 = 0x4222;
+
+int QUICK_KEY_ONEKET_TEST = 0x4223;
+
+int QUICK_KEY_WIND_HOT = 0x422A;
+
+int QUICK_KEY_WIND_HOT_LIFT = 0x422B;
+
+int QUICK_KEY_WIND_COLD = 0x422C;
+
+int QUICK_KEY_WIND_COLD_LIFT = 0x422D;
+
+int QUICK_KEY_MUSIC_PAUSE = 0x4230;
+
+int QUICK_KEY_MUSIC_RUN_STOP = 0x4231;
+
+int QUICK_KEY_MUSIC_LAST = 0x4232;
+
+int QUICK_KEY_MUSIC_NEXT = 0x4233;
+
+int QUICK_KEY_BLUETOOTH_SWITCH = 0x4234;
+
+int QUICK_KEY_MUSIC_MUTE = 0x4235;
+
+int QUICK_KEY_CLOCK_START = 0x4239;
+
+int QUICK_KEY_CLOCK_MID = 0x423A;
+
+int QUICK_KEY_UNCLOCK_START = 0x423B;
+
+int QUICK_KEY_UNCLOCK_MID = 0x423C;
+
+int QUICK_KEY_KNOD_STOP = 0x423D;
+
+int QUICK_KEY_KNOD_PRESS = 0x423E;
+
+int QUICK_KEY_TAMALL_NET = 0x4236;
+
+int QUICK_KEY_APP_UPGRADE = 0x4237;
+
+int QUICK_KEY_ALIGENIE_RESET = 0x4238;
+
+//    int KEY_ENG_NONE = 0x6000;
+int KEY_ENG_AIR = 0x6001;
+
+int KEY_ENG_FOOT_RL = 0x6002;
+
+int KEY_ENG_LEG_RL = 0x6003;
+
+int KEY_ENG_LEG_FLEX = 0x6004;
+
+int KEY_ENG_LEG_UP_FLEX = 0x6005;
+
+int KEY_ENG_LEG_KNEAD = 0x6006;
+
+int KEY_ENG_SLIDE = 0x6007;
+
+int KEY_ENG_BACKPAD = 0x6008;
+
+int KEY_ENG_ZERO = 0x6009;
+
+int KEY_ENG_LEG_MOTOR = 0x600A;
+
+int KEY_ENG_KNEAD = 0x600B;
+
+int KEY_ENG_KNOCK = 0x600C;
+
+int KEY_ENG_WALK = 0x600D;
+
+int KEY_ENG_D3 = 0x600E;
+
+int KEY_ENG_D4 = 0x600F;
+
+int KEY_ENG_LED_RGB = 0x6010;
+
+int KEY_ENG_WIFI = 0x6011;
+
+int KEY_ENG_BLUETOOTH = 0x6012;
+
+int KEY_ENG_HEAT = 0x6013;
+
+int KEY_ENG_ONE_KEY_TEST = 0x6014;
+
+int KEY_ENG_TOTAL_TIME = 0x6015;
+
+int KEY_ENG_ONE_KEY_TEST_EXIT = 0x6016;
+
+int KEY_ENG_SET_RESET_AFTER_END = 0x6017;
+
+int KEY_ENG_SET_AIR_STRENGTH = 0x6018;
+
+int KEY_ENG_SET_SLIDE_SW = 0x6019;
+
+int KEY_ENG_SET_WALK_MAX = 0x601A;
+
+int KEY_ENG_KEY_RELEASE = 0x6050;
+
+int KEY_ENG_UP = 0x6051;
+
+int KEY_ENG_DN = 0x6052;
+
+int KEY_ENG_LEFT = 0x6053;
+
+int KEY_ENG_RIGHT = 0x6054;
+
+int KEY_ENG_ENTER = 0x6055;
+
+int KEY_ENG_UP_RELEASE = 0x6056;
+
+int KEY_ENG_DN_RELEASE = 0x6057;
+
+int KEY_ENG_LEFT_RELEASE = 0x6058;
+
+int KEY_ENG_RIGHT_RELEASE = 0x6059;
+
+int KEY_ENG_ENTER_RELEASE = 0x605A;
+
+int KEY_ENG_ENTER_3S = 0x605B;
+
+int KEY_ENG_TOOGLE_RESET_AFTER_END = 0x6060;
+
+int KEY_ENG_BASE_AIR_ADD = 0x6061;
+
+int KEY_ENG_BASE_AIR_DEC = 0x6062;
+
+int KEY_ENG_TOOGLE_SLIDE_SW = 0x6063;
+
+int H10_KEY_ALIGENIE_NONE = 0x7F7F;
+
+int KEY_ENG_MIC = 0x7F80;
+
+int KEY_MUSIC = 0x7F81;
+
+int KEY_MOVIE = 0x7F82;
+
+int H10_KEY_VOICE_FILTER_0 = 0x4140;
+
+int H10_KEY_VOICE_FILTER_1 = 0x4141;
+
+int H10_KEY_VOICE_FILTER_2 = 0x4142;
+
+int H10_KEY_VOICE_FILTER_3 = 0x4143;
+
+int H10_KEY_VOICE_FILTER_4 = 0x4144;
+
+int H10_KEY_VOICE_FILTER_5 = 0x4145;
+
+int H10_KEY_VOICE_FILTER_6 = 0x4146;
+
+int H10_KEY_VOICE_FILTER_7 = 0x4147;
+
+int H10_KEY_VOICE_FILTER_8 = 0x4148;
+
+
+/*int H10_KEY_NONE = 0x0000;
+    int H10_KEY_POWER_OFF = 0x0007;
+    int H10_KEY_POWER_ON = 0x0001;
+    int H10_KEY_PAUSE = 0x0005;
+    int H10_KEY_CONTINUE = 0x0006;
+    int H10_KEY_ALL_VERSION = 0x0010;
+    int H10_KEY_HW_TEST = 0x0011;
+    int H10_KEY_ENG = 0x0110;
+
+
+    int H10_KEY_CHAIR_AUTO_0 = 0x1001;//頓땡뿟릿（튁익뿟릿）
+    int H10_KEY_CHAIR_AUTO_1 = 0x1002;//竭嵐삶쭹（竭嵐객칡）
+    int H10_KEY_CHAIR_AUTO_2 = 0x1003;//金姿다추（햐漑객칡）
+    int H10_KEY_CHAIR_AUTO_3 = 0x1004;//묏鱗숑箕（擧姑맣）
+    int H10_KEY_CHAIR_AUTO_4 = 0x1005;//쇘쓩路듐（곕菱땡）
+    int H10_KEY_CHAIR_AUTO_5 = 0x1006;//藍流竭뻠（苟곕菱땡）
+    int H10_KEY_CHAIR_AUTO_6 = 0x1007;//悧꼴楠
+    int H10_KEY_CHAIR_AUTO_7 = 0x1008;//큽珙駒竟
+    int H10_KEY_CHAIR_AUTO_8 = 0x1009;//懃쥣SPA
+    int H10_KEY_CHAIR_AUTO_9 = 0x100A;//겜쥴영빱
+    int H10_KEY_CHAIR_AUTO_10 = 0x100B;  //햐휼뵉빱
+    int H10_KEY_CHAIR_AUTO_11 = 0x100C;  //폭箕竭랩
+    int H10_KEY_CHAIR_AUTO_12 = 0x100D;  //냇寧箕
+    int H10_KEY_CHAIR_AUTO_13 = 0x100E;  //빌俱괏숯
+    int H10_KEY_CHAIR_AUTO_14 = 0x100F;  //섐鈴股컬
+
+    int H10_KEY_AUTO_YOGA_CHAIR = 0x1010;
+    int H10_KEY_AUTO_WAKEUP = 0x1011;
+    int H10_KEY_AUTO_RELAXATION = 0x1012;
+    int H10_KEY_AUTO_CEO_CONFORT = 0x1013;
+    int H10_KEY_AUTO_QUEEN_SPECIAL = 0x1014;
+    int H10_KEY_AUTO_SENIOR_PRIORITY = 0x1015;
+    int H10_KEY_AUTO_UPPER = 0x1016;
+    int H10_KEY_AUTO_SPINE_CARE = 0x1017;
+    int H10_KEY_AUTO_LOWER = 0x1018;
+    int H10_KEY_AUTO_MORNING_ZAP = 0x1019;
+    int H10_KEY_AUTO_REFRESHING_NAP = 0x101A;
+    int H10_KEY_AUTO_SWEET_DREAMS = 0x101B;
+    int H10_KEY_AUTO_DEMO1 = 0x101C;
+    int H10_KEY_AUTO_DEMO2 = 0x101D;
+
+
+    int 무 = 0x2010; // 주무름
+    int H10_KEY_CKNEAD = 0x2011; // 두드림
+    int H10_KEY_PRESS = 0x2012;  // 지압
+    int H10_KEY_KNOCK = 0x2013;  // 두드림
+    int H10_KEY_SKNOCK = 0x2014;  // 손날
+    int H10_KEY_WAVELET = 0x2015;  // 리듬©
+    int H10_KEY_3D_PRESS = 0x2018; // 복합 안마
+
+
+    int H10_KEY_AIRBAG_FULL = 0x3010;
+    int H10_KEY_AIRBAG_ARM = 0x3011;
+    int H10_KEY_AIRBAG_WAIST = 0x3012;
+    int H10_KEY_AIRBAG_HIP = 0x3013;
+    int H10_KEY_AIRBAG_LEG = 0x3014;
+
+    int H10_KEY_AIRBAG_STRENGTH_OFF = 0x3020;
+    int H10_KEY_AIRBAG_STRENGTH_1 = 0x3021;
+    int H10_KEY_AIRBAG_STRENGTH_2 = 0x3022;
+    int H10_KEY_AIRBAG_STRENGTH_3 = 0x3023;
+    int H10_KEY_AIRBAG_STRENGTH_4 = 0x3024;
+    int H10_KEY_AIRBAG_STRENGTH_5 = 0x3025;
+
+    int H10_KEY_ALL_HEAT_SWITCH = 0x4010;
+    int H10_KEY_ALL_HEAT_0 = 0x401F;
+    int H10_KEY_ALL_HEAT_1 = 0x4011;
+    int H10_KEY_ALL_HEAT_2 = 0x4012;
+    int H10_KEY_ALL_HEAT_3 = 0x4013;
+
+    int H10_KEY_BACK_HEAT_0 = 0x4018;
+    int H10_KEY_BACK_HEAT_1 = 0x4019;
+    int H10_KEY_BACK_HEAT_2 = 0x401A;
+    int H10_KEY_BACK_HEAT_3 = 0x401B;
+
+
+    int H10_KEY_LEG_HEAT_0 = 0x4014;
+    int H10_KEY_LEG_HEAT_1 = 0x4015;
+    int H10_KEY_LEG_HEAT_2 = 0x4016;
+    int H10_KEY_LEG_HEAT_3 = 0x4017;*/
+
+/* int H10_KEY_WIND_HOT_0 = 0x4000;  //온열
+     int H10_KEY_WIND_HOT_1 = 0x4001;  //int
+     int H10_KEY_WIND_HOT_2 = 0x4002;  //int
+     int H10_KEY_WIND_HOT_3 = 0x4003;  //int
+     int H10_KEY_WIND_HOT_4 = 0x4004;  //킁루4도
+     int H10_KEY_WIND_HOT_5 = 0x4005;  //킁루5도*/
+
+/*  int H10_KEY_WIND_COLD_0 = 0x4008;  //잤루0도
+      int H10_KEY_WIND_COLD_1 = 0x4009;  //잤루1도
+      int H10_KEY_WIND_COLD_2 = 0x400A;  //잤루2도
+      int H10_KEY_WIND_COLD_3 = 0x400B;  //잤루3도
+      int H10_KEY_WIND_COLD_4 = 0x400C;  //잤루4도
+      int H10_KEY_WIND_COLD_5 = 0x400D;  //잤루5도*/
+
+/* int H10_KEY_WHEEL_SPEED_OFF = 0x4020;  //수정
+     int H10_KEY_WHEEL_SPEED_ON = 0x4021;
+     int H10_KEY_WHEEL_SPEED1 = 0x4022;
+     int H10_KEY_WHEEL_SPEED2 = 0x4023;
+     int H10_KEY_WHEEL_SPEED3 = 0x4024;
+
+     int H10_KEY_WORK_TIME_10MIN = 0x4073;
+     int H10_KEY_WORK_TIME_20MIN = 0x4074;
+     int H10_KEY_WORK_TIME_30MIN = 0x4075;
+
+     int H10_KEY_RUNOVER_NORESET = 0x4080;
+     int H10_KEY_RUNOVER_RESET = 0x4081;
+
+     int H10_KEY_WALK_UP_START = 0x5010;  // 안마 볼 위치 조정
+     int H10_KEY_WALK_UP_STOP = 0x5011;
+     int H10_KEY_WALK_DOWN_START = 0x5012;
+     int H10_KEY_WALK_DOWN_STOP = 0x5013;
+
+     int H10_KEY_BACKPAD_UP_START = 0x5014;
+     int H10_KEY_BACKPAD_DOWN_START = 0x5015;
+     int H10_KEY_BACKPAD_STOP = 0x5016;
+
+     int H10_KEY_LEGPAD_UP_START = 0x5017;
+     int H10_KEY_LEGPAD_DOWN_START = 0x5018;
+     int H10_KEY_LEGPAD_STOP = 0x5019;
+
+     int H10_KEY_FLEX_EXTEND = 0x501A;  // 다리 기리 조절
+     int H10_KEY_FLEX_CONTRACT = 0x501B;
+     int H10_KEY_FLEX_STOP = 0x501C;
+
+     int H10_KEY_KNEE_UP_START = 0x5020;
+     int H10_KEY_KNEE_DOWN_START = 0x5021;
+     int H10_KEY_KNEE_STOP = 0x5022;
+
+     int H10_KEY_ZERO_OFF = 0x5032;
+     int H10_KEY_ZERO_LEVEL1 = 0x5033;
+     int H10_KEY_ZERO_LEVEL2 = 0x5034;
+
+     int H10_KEY_SPEED_1 = 0x5111;
+     int H10_KEY_SPEED_2 = 0x5112;
+     int H10_KEY_SPEED_3 = 0x5113;
+     int H10_KEY_SPEED_4 = 0x5114;
+     int H10_KEY_SPEED_5 = 0x5115;
+     int H10_KEY_SPEED_6 = 0x5116;
+
+     int H10_KEY_WIDTH_MAX = 0x5141;
+     int H10_KEY_WIDTH_MED = 0x5142;
+     int H10_KEY_WIDTH_MIN = 0x5143;
+
+     int H10_KEY_LOCATE_FULL = 0x5160;
+     int H10_KEY_LOCATE_PART = 0x5161;
+     int H10_KEY_LOCATE_POINT = 0x5162;
+
+     int H10_KEY_3D_STRENGTH_0 = 0x5150;
+     int H10_KEY_3D_STRENGTH_1 = 0x5151;
+     int H10_KEY_3D_STRENGTH_2 = 0x5152;
+     int H10_KEY_3D_STRENGTH_3 = 0x5153;
+     int H10_KEY_3D_STRENGTH_4 = 0x5154;
+     int H10_KEY_3D_STRENGTH_5 = 0x5155;
+     int H10_KEY_3D_STRENGTH = 0x515A;
+
+     int H10_KEY_LANGUAGE_EN = 0x5330;
+     int H10_KEY_LANGUAGE_CH = 0x5331;
+
+
+     int H10_KEY_VOICE_VOLUME_0 = 0x4120;
+     int H10_KEY_VOICE_VOLUME_1 = 0x4121;
+     int H10_KEY_VOICE_VOLUME_2 = 0x4122;
+     int H10_KEY_VOICE_VOLUME_3 = 0x4123;
+     int H10_KEY_VOICE_VOLUME_4 = 0x4124;
+     int H10_KEY_VOICE_VOLUME_5 = 0x4125;
+     int H10_KEY_VOICE_VOLUME_6 = 0x4126;
+     int H10_KEY_VOICE_VOLUME_7 = 0x4127;
+     int H10_KEY_VOICE_VOLUME_8 = 0x4128;
+     int H10_KEY_VOICE_VOLUME_9 = 0x4129;
+     int H10_KEY_VOICE_VOLUME_10 = 0x412A;
+
+     int KEY_ENG_AIR = 0x6001;   //
+     int KEY_ENG_FOOT_RL = 0x6002;   //
+     int KEY_ENG_LEG_RL = 0x6003;   //
+     int KEY_ENG_LEG_FLEX = 0x6004;   //
+     int KEY_ENG_LEG_UP_FLEX = 0x6005;   //
+     int KEY_ENG_LEG_KNEAD = 0x6006;   //
+     int KEY_ENG_SLIDE = 0x6007;   //
+     int KEY_ENG_BACKPAD = 0x6008;   //
+     int KEY_ENG_ZERO = 0x6009;   //
+     int KEY_ENG_LEG_MOTOR = 0x600A;   //
+     int KEY_ENG_KNEAD = 0x600B;   //
+     int KEY_ENG_KNOCK = 0x600C;   //
+     int KEY_ENG_WALK = 0x600D;   //
+     int KEY_ENG_D3 = 0x600E;   //
+     int KEY_ENG_D4 = 0x600F;   //
+     int KEY_ENG_LED_RGB = 0x6010;   //
+     int KEY_ENG_WIFI = 0x6011;   //
+     int KEY_ENG_BLUETOOTH = 0x6012;   //
+     int KEY_ENG_HEAT = 0x6013;   //
+     int KEY_ENG_ONE_KEY_TEST = 0x6014;   //
+     int KEY_ENG_TOTAL_TIME = 0x6015;   //
+     int KEY_ENG_ONE_KEY_TEST_EXIT = 0x6016;   //
+     int KEY_ENG_SET_RESET_AFTER_END = 0x6017;   //
+     int KEY_ENG_SET_AIR_STRENGTH = 0x6018;   //
+     int KEY_ENG_SET_SLIDE_SW = 0x6019;   //
+     int KEY_ENG_SET_WALK_MAX = 0x601A;   //
+
+     int KEY_ENG_KEY_RELEASE = 0x6050;   //
+     int KEY_ENG_UP = 0x6051;   //
+     int KEY_ENG_DN = 0x6052;   //
+     int KEY_ENG_LEFT = 0x6053;   //
+     int KEY_ENG_RIGHT = 0x6054;   //
+     int KEY_ENG_ENTER = 0x6055;   //
+     int KEY_ENG_UP_RELEASE = 0x6056;   //
+     int KEY_ENG_DN_RELEASE = 0x6057;   //
+     int KEY_ENG_LEFT_RELEASE = 0x6058;   //
+     int KEY_ENG_RIGHT_RELEASE = 0x6059;   //
+     int KEY_ENG_ENTER_RELEASE = 0x605A;   //
+     int KEY_ENG_ENTER_3S = 0x605B;   //
+     int KEY_ENG_TOOGLE_RESET_AFTER_END = 0x6060;   //
+     int KEY_ENG_BASE_AIR_ADD = 0x6061;   //
+     int KEY_ENG_BASE_AIR_DEC = 0x6062;   //
+     int KEY_ENG_TOOGLE_SLIDE_SW = 0x6063;   //
+
+     int H10_KEY_ALIGENIE_NONE = 0x7F7F
+
+
+     int H10_KEY_AIRBAG_SHOULDER_OFF = 0x3030;  //肩部气囊关
+     int H10_KEY_AIRBAG_SHOULDER_1 = 0x3031;  //肩部气囊力度1
+     int H10_KEY_AIRBAG_SHOULDER_2 = 0x3032;  //肩部气囊力度2
+     int H10_KEY_AIRBAG_SHOULDER_3 = 0x3033;  //肩部气囊力度3
+     int H10_KEY_AIRBAG_SHOULDER_4 = 0x3034;  //肩部气囊力度4
+     int H10_KEY_AIRBAG_SHOULDER_5 = 0x3035;  //肩部气囊力度5
+     int H10_KEY_AIRBAG_SHOULDER_ADD = 0x303F;  //肩部气囊力度增加*/
+
+/* int H10_KEY_AIRBAG_ARM_OFF = 0x3040;  //手部气囊关
+     int H10_KEY_AIRBAG_ARM_1 = 0x3041;  //手部气囊力度1
+     int H10_KEY_AIRBAG_ARM_2 = 0x3042;  //手部气囊力度2
+     int H10_KEY_AIRBAG_ARM_3 = 0x3043;  //手部气囊力度3
+     int H10_KEY_AIRBAG_ARM_4 = 0x3044;  //手部气囊力度4
+     int H10_KEY_AIRBAG_ARM_5 = 0x3045;  //手部气囊力度5
+     int H10_KEY_AIRBAG_ARM_ADD = 0x304F;  //手部气囊力度增加*/
+
+/*int H10_KEY_AIRBAG_WAIST_OFF = 0x3050;  //腰部气囊关
+    int H10_KEY_AIRBAG_WAIST_1 = 0x3051;  //腰部气囊力度1
+    int H10_KEY_AIRBAG_WAIST_2 = 0x3052;  //腰部气囊力度2
+    int H10_KEY_AIRBAG_WAIST_3 = 0x3053;  //腰部气囊力度3
+    int H10_KEY_AIRBAG_WAIST_4 = 0x3054;  //腰部气囊力度4
+    int H10_KEY_AIRBAG_WAIST_5 = 0x3055;  //腰部气囊力度5
+    int H10_KEY_AIRBAG_WAIST_ADD = 0x305F;  //腰部气囊力度增加*/
+
+/* int H10_KEY_AIRBAG_HIP_OFF = 0x3060;  //臀部气囊关
+     int H10_KEY_AIRBAG_HIP_1 = 0x3061;  //臀部气囊力度1
+     int H10_KEY_AIRBAG_HIP_2 = 0x3062;  //臀部气囊力度2
+     int H10_KEY_AIRBAG_HIP_3 = 0x3063;  //臀部气囊力度3
+     int H10_KEY_AIRBAG_HIP_4 = 0x3064;  //臀部气囊力度4
+     int H10_KEY_AIRBAG_HIP_5 = 0x3065;  //臀部气囊力度5
+     int H10_KEY_AIRBAG_HIP_ADD = 0x306F;  //臀部气囊力度增加*/
+
+/*int H10_KEY_AIRBAG_LEG_OFF = 0x3070;  //腿部气囊关
+    int H10_KEY_AIRBAG_LEG_1 = 0x3071;  //腿部气囊力度1
+    int H10_KEY_AIRBAG_LEG_2 = 0x3072;  //腿部气囊力度2
+    int H10_KEY_AIRBAG_LEG_3 = 0x3073;  //腿部气囊力度3
+    int H10_KEY_AIRBAG_LEG_4 = 0x3074;  //腿部气囊力度4
+    int H10_KEY_AIRBAG_LEG_5 = 0x3075;  //腿部气囊力度5
+    int H10_KEY_AIRBAG_LEG_ADD = 0x307F;  //腿部气囊力度增加*/
+
+/* int H10_KEY_AIRBAG_FOOT_OFF = 0x3080;
+     int H10_KEY_AIRBAG_FOOT_1 = 0x3081;
+     int H10_KEY_AIRBAG_FOOT_2 = 0x3082;
+     int H10_KEY_AIRBAG_FOOT_3 = 0x3083;
+     int H10_KEY_AIRBAG_FOOT_4 = 0x3084;
+     int H10_KEY_AIRBAG_FOOT_5 = 0x3085;*/
+
+int musicImagery01 = 0x1;
+
+int musicImagery02 = 0x2;
+
+int musicImagery03 = 0x3;
+
+int musicImagery04 = 0x4;
+
+int musicImagery05 = 0x5;
+
+int musicConcentration01 = 0x6;
+
+int musicConcentration02 = 0x7;
+
+int musicConcentration03 = 0x8;
+
+int musicConcentration04 = 0x9;
+
+int musicConcentration05 = 0xA;
+
+int musicConcentration06 = 0xB;
+
+int musicConcentration07 = 0xC;
+
+int musicConcentration08 = 0xD;
+
+int musicConcentration09 = 0xE;
+
+int musicConcentration10 = 0xF;
+
+int musicConcentration11 = 0x10;
+
+int musicConcentration12 = 0x11;
+
+int musicConcentration13 = 0x12;
+
+int musicConcentration14 = 0x13;
+
+int musicConcentration15 = 0x14;
+
+int musicWellBeing01 = 0x15;
+
+int musicWellBeing02 = 0x16;
+
+int musicWellBeing03 = 0x17;
+
+int musicWellBeing04 = 0x18;
+
+int musicWellBeing05 = 0x19;
+
+int musicWellBeing06 = 0x1A;
+
+int musicWellBeing07 = 0x1B;
+
+int musicWellBeing08 = 0x1C;
+
+int musicWellBeing09 = 0x1D;
+
+int musicWellBeing10 = 0x1E;
+
+int musicWellBeing11 = 0x1F;
+
+int musicWellBeing12 = 0x20;
+
+int musicWellBeing13 = 0x21;
+
+int musicWellBeing14 = 0x22;
+
+int musicWellBeing15 = 0x23;
+
+int musicTraining01 = 0x24;
+
+int musicTraining02 = 0x25;
+
+int musicTraining03 = 0x26;
+
+int musicTraining04 = 0x27;
+
+int musicTraining05 = 0x28;
+
+int musicBreath01 = 0x29;
+
+int musicBreath02 = 0x2A;
+
+int musicBreath03 = 0x2B;
+
+int musicBreath04 = 0x2C;
+
+int musicBreath05 = 0x2D;
+
+int musicMorning01 = 0x2E;
+
+int musicMorning02 = 0x2F;
+
+int musicMorning03 = 0x30;
+
+int musicMorning04 = 0x31;
+
+int musicMorning05 = 0x32;
+
+int musicNight01 = 0x33;
+
+int musicNight02 = 0x34;
+
+int musicNight03 = 0x35;
+
+int musicNight04 = 0x36;
+
+int musicNight05 = 0x37;
+
+int musicear01 = 0x38;
+
+int musicear02 = 0x39;
+
+int musicear03 = 0x3A;
+
+int musicear04 = 0x3B;
+
+int musicear05 = 0x3C;
+
+int musicear06 = 0x3D;
+
+int musicear07 = 0x3E;
+
+int musicear08 = 0x3F;
+
+int musicear09 = 0x40;
+
+int musicear10 = 0x41;
+
+int musicear11 = 0x42;
+
+int musicmental01 = 0x43;
+
+int musicmental02 = 0x44;
+
+int musicmental03 = 0x45;
+
+int musicmental04 = 0x46;
+
+int musicmental05 = 0x47;
+
+int musicmental06 = 0x48;
+
+int musicmental07 = 0x49;
+
+int musicmental08 = 0x4A;
+
+int musicmeditation01 = 0x4B;
+
+int musicmeditation02 = 0x4C;
+
+int musicmeditation03 = 0x4D;
+
+int musicmeditation04 = 0x4E;
+
+int musicmeditation05 = 0x4F;
+
+int musicmeditation06 = 0x50;
+
+int musicmeditation07 = 0x51;
+
+int musicmeditation08 = 0x52;
+
+int musicmeditation09 = 0x53;
+
+int musicmeditation10 = 0x54;
+
+int musicmeditation11 = 0x55;
+
+int musicmeditation12 = 0x56;
+
+int musicmeditation13 = 0x57;
+
+int musicmeditation14 = 0x58;
+
+int musicmeditation15 = 0x59;
+
+int musicmeditation16 = 0x5A;
+
+int musicmeditation17 = 0x5B;
+
+int musicmeditation18 = 0x5C;
+
+int musicmeditation19 = 0x5D;
+
+int musicmeditation20 = 0x5E;

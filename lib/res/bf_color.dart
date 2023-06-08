@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 class BFColor {
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
-  static const Color yellow = Color(0xFFD6AC7C);
+  static const Color gold = Color(0xFFD6AC7C);
 
   static const Color gray200 = Color(0xFF282D31);
   static const Color gray300 = Color(0xFF32373B);
+  static const Color gray400 = Color(0xFF474E54);
   static const Color gray500 = Color(0xFF737E87);
 
   static const MaterialColor primaryColor = MaterialColor(
