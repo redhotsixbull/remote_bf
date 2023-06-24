@@ -24,7 +24,7 @@ class _SpeedPowerControlButtonState extends State<SpeedPowerControlButton> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        widget.onClick;
+        widget.onClick();
       },
       child: Container(
         decoration: BoxDecoration(

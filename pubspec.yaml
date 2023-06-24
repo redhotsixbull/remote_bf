@@ -13,6 +13,7 @@ dependencies:
   flutter_svg: 2.0.6
   smooth_page_indicator: 1.1.0
   flutter_screenutil: 5.8.4
+  modal_bottom_sheet: 3.0.0-pre
   flutter: 
     sdk: flutter
 
@@ -53,5 +54,8 @@ flutter:
     - assets/
     - assets/logo/
     - assets/icon/
+    - assets/chair/
+    - assets/mental/
+    - assets/img/
   uses-material-design: true
 

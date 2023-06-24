@@ -18,13 +18,15 @@ class MenuListView extends StatelessWidget {
             height: 10,
           ),
           Expanded(
-            child: Column(
-              children:
-                  List.generate(massageCategory.massageList.length, (index) {
-                return MassageListTile(
-                  massage: massageCategory.massageList[index],
-                );
-              }),
+            child: SingleChildScrollView(
+              child: Column(
+                children:
+                    List.generate(massageCategory.massageList.length, (index) {
+                  return MassageListTile(
+                    massage: massageCategory.massageList[index],
+                  );
+                }),
+              ),
             ),
           ),
         ],

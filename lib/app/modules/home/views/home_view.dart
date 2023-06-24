@@ -7,6 +7,7 @@ import 'package:remote_bf/app/modules/home/setting/views/setting_view.dart';
 import 'package:remote_bf/component/bottomnavigation/bf_bottom_navigation.dart';
 import 'package:remote_bf/res/bf_color.dart';
 import 'package:remote_bf/res/bf_graphy.dart';
+import 'package:remote_bf/res/bf_icon.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -17,70 +18,103 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: BFColor.primaryColor,
-      body: Stack(
-        children: [
-          Container(
-            child: PageView(
+      body: Scaffold(
+        body: Stack(
+          children: [
+            PageView(
               controller: controller.pageController,
               physics: const NeverScrollableScrollPhysics(),
               children: [
-                HomeMainView(),
+                Navigator(
+                  key: controller.navigatorKeyFirst,
+                  onGenerateRoute: (routeSet) {
+                    return MaterialPageRoute(builder: (context) {
+                      return HomeMainView();
+                    });
+                  },
+                ),
                 MassageView(),
                 PoseView(),
-                SettingView(),
+                Navigator(
+                  key: controller.navigatorKeySecond,
+                  onGenerateRoute: (routeSet) {
+                    return MaterialPageRoute(builder: (context) {
+                      return SettingView();
+                    });
+                  },
+                ),
               ],
             ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                      color: BFColor.gray200,
-                      border:
-                          Border.all(color: BFColor.gray300.withOpacity(0.2)),
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(14),
-                          topRight: Radius.circular(14))),
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "전신순환",
-                          style: BFGraphy.bfText2023.body2
-                              .copyWith(color: BFColor.gray500),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              "20:00",
-                              style: BFGraphy.bfText2023.body2
-                                  .copyWith(color: BFColor.gray500),
-                            ),
-                            SizedBox(
-                              width: 13,
-                            ),
-                            Icon(Icons.pause_circle)
-                          ],
-                        ),
-                      ],
+            // Container(
+            //   child: Navigator(
+            //     key: controller.navigatorKey,
+            //     onGenerateRoute: (routeSet) {
+            //       return MaterialPageRoute(builder: (context) {
+            //         return PageView(
+            //           controller: controller.pageController,
+            //           physics: const NeverScrollableScrollPhysics(),
+            //           children: [
+            //             HomeMainView(),
+            //             MassageView(),
+            //             PoseView(),
+            //             SettingView(),
+            //           ],
+            //         );
+            //       });
+            //     },
+            //   ),
+            // ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: BFColor.gray200,
+                        border:
+                            Border.all(color: BFColor.gray300.withOpacity(0.2)),
+                        borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(14),
+                            topRight: Radius.circular(14))),
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 13, 16, 13),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "전신순환",
+                            style: BFGraphy.bfText2023.body2
+                                .copyWith(color: BFColor.gray500),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                "20:00",
+                                style: BFGraphy.bfText2023.body2
+                                    .copyWith(color: BFColor.gray500),
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              BFIcon.ic_pause_circle_nor(),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
-                LinearProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                  backgroundColor: BFColor.gray200,
-                  value: 0.4,
-                ),
-              ],
+                  LinearProgressIndicator(
+                    valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
+                    backgroundColor: BFColor.gray200,
+                    value: 0.4,
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
       bottomNavigationBar: BFBottomNavigation(
         callBack: (int) {

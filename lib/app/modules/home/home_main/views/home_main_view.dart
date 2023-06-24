@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:remote_bf/app/data/mock/home_mode_mock.dart';
+import 'package:remote_bf/app/modules/home/home_main/menupage/views/menu_page_view.dart';
 import 'package:remote_bf/app/modules/home/home_main/views/widget/mode_tile.dart';
-import 'package:remote_bf/app/routes/app_pages.dart';
 import 'package:remote_bf/component/appbar/bf_home_appbar.dart';
 import 'package:remote_bf/res/bf_color.dart';
 import 'package:remote_bf/res/bf_graphy.dart';
@@ -93,7 +93,12 @@ class HomeMainView extends GetView<HomeMainController> {
                             icon: massageCategoryMock[index].svgIcon,
                             onTap: () {
                               print(index);
-                              Get.toNamed(Routes.MENU);
+
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MenuPageView()),
+                              );
                             });
                       },
                     ),

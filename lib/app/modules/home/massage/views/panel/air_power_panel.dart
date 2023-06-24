@@ -21,26 +21,178 @@ class _AirPowerPanelState extends State<AirPowerPanel> {
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Text(
-              "XD 강도",
-              style: BFGraphy.bfText2023.body2
-                  .copyWith(fontWeight: FontWeight.w500),
-            ),
-          ),
-          SpeedPowerSeekBar(onValueChange: (val) {
-            updateTest = val;
-            setState(() {});
-          }),
-          Padding(
-            padding: const EdgeInsets.only(left: 16),
-            child: Text(
-              "마사지 속도",
+              "전체",
               style: BFGraphy.bfText2023.body2
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
           SpeedPowerSeekBar(
-            onValueChange: (val) {},
-            currentValue: updateTest,
+              showValueUnderline: true,
+              onValueChange: (val) {
+                updateTest = val;
+                setState(() {});
+              }),
+          Row(
+            children: [
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "어깨",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "팔",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "어깨",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "팔",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(
+                  child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 16),
+                      child: Text(
+                        "어깨",
+                        style: BFGraphy.bfText2023.body2
+                            .copyWith(fontWeight: FontWeight.w500),
+                      ),
+                    ),
+                    SpeedPowerSeekBar(
+                      onValueChange: (val) {},
+                      currentValue: updateTest,
+                    ),
+                  ],
+                ),
+              )),
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "팔",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+            ],
+          ),
+          Row(
+            children: [
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "어깨",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+              Expanded(
+                  child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 16),
+                    child: Text(
+                      "팔",
+                      style: BFGraphy.bfText2023.body2
+                          .copyWith(fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  SpeedPowerSeekBar(
+                    onValueChange: (val) {},
+                    currentValue: updateTest,
+                  ),
+                ],
+              )),
+            ],
           ),
         ],
       ),

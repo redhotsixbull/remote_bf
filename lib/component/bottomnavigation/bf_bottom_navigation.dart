@@ -25,7 +25,7 @@ class _BFBottomNavigationState extends State<BFBottomNavigation> {
         activeIcon: BFIcon.ic_home(color: BFColor.white),
       ),
       BottomNavigationBarItem(
-        label: "요약",
+        label: "마사지",
         icon: BFIcon.ic_tune(color: BFColor.white.withOpacity(0.5)),
         activeIcon: BFIcon.ic_tune(color: BFColor.white),
       ),

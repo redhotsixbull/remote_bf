@@ -7,7 +7,7 @@ Future<dynamic> showPopup(BuildContext context, Widget widget,
   return await showDialog(
     context: context,
     barrierDismissible: closeOutLineClick ?? false,
-    barrierColor: barrierColor ?? BFColor.black.withOpacity(0.40),
+    barrierColor: barrierColor ?? BFColor.black.withOpacity(0.80),
     builder: (BuildContext context) {
       return widget;
     },
@@ -20,4 +20,16 @@ showToast(String message) {
       backgroundColor: BFColor.black,
       toastLength: Toast.LENGTH_LONG,
       gravity: ToastGravity.BOTTOM);
+}
+
+Future<dynamic> openBottomSheet(BuildContext context, Widget widget,
+    {bool? closeOutLineClick, Color? barrierColor}) async {
+  return await showModalBottomSheet<dynamic>(
+      isScrollControlled: true,
+      context: context,
+      backgroundColor: Colors.transparent,
+      barrierColor: barrierColor ?? BFColor.black.withOpacity(0.80),
+      builder: (BuildContext context) {
+        return widget;
+      });
 }

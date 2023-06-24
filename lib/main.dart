@@ -12,7 +12,7 @@ void main() {
 
   runApp(
     ScreenUtilInit(
-      designSize: Size(360, 690),
+      designSize: const Size(360, 690),
       minTextAdapt: true,
       builder: (context, child) => GetMaterialApp(
         title: "Application",
@@ -25,6 +25,27 @@ void main() {
           ),
           fontFamily: "BodyFriendSans",
           primarySwatch: BFColor.primaryColor,
+          inputDecorationTheme: InputDecorationTheme(
+            filled: true,
+            fillColor: BFColor.gray200,
+            hintStyle: BFGraphy.bfText2023.detail2,
+            contentPadding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
+            focusedErrorBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16)),
+            ),
+            errorBorder: const OutlineInputBorder(
+                borderRadius: BorderRadius.all(Radius.circular(16)),
+                borderSide: BorderSide(color: Colors.red, width: 1.0)),
+            focusedBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16)),
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16)),
+            ),
+            disabledBorder: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16)),
+            ),
+          ),
         ),
         initialRoute: AppPages.INITIAL,
         getPages: AppPages.routes,

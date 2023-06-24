@@ -137,4 +137,124 @@ class BFIcon {
         width: size.width,
         colorFilter: ColorFilter.mode(color, blendMode));
   }
+
+  static SvgPicture ic_menu_vertifal_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_menu_vertifal_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_arrow_end_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_arrow_end_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_arrow_top_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_arrow_top_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_caution_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_caution_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_arrow_dropup(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_arrow_dropup.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_lock(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_lock.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_check_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_check_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_sitdown(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_sitdown.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_step1(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_step1.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_step2(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_step2.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_step3(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_step3.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
+
+  static SvgPicture ic_pause_circle_nor(
+      {Color color = defaultColor,
+      BlendMode blendMode = BlendMode.srcIn,
+      Size size = defaultSize}) {
+    return SvgPicture.asset("assets/icon/ic_pause_circle_nor.svg",
+        height: size.height,
+        width: size.width,
+        colorFilter: ColorFilter.mode(color, blendMode));
+  }
 }

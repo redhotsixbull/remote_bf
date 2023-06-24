@@ -10,6 +10,7 @@ class PowerSpeedControlPanel extends StatefulWidget {
 }
 
 class _PowerSpeedControlPanelState extends State<PowerSpeedControlPanel> {
+  int firstTeest = 0;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,7 +26,10 @@ class _PowerSpeedControlPanelState extends State<PowerSpeedControlPanel> {
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
-          SpeedPowerSeekBar(onValueChange: (int) {}),
+          SpeedPowerSeekBar(
+            showValueUnderline: true,
+            onValueChange: (value) {},
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 16),
             child: Text(
@@ -34,7 +38,12 @@ class _PowerSpeedControlPanelState extends State<PowerSpeedControlPanel> {
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
-          SpeedPowerSeekBar(onValueChange: (int) {}),
+          SpeedPowerSeekBar(
+            showValueUnderline: true,
+            onValueChange: (value) {
+              setState(() {});
+            },
+          ),
         ],
       ),
     );
